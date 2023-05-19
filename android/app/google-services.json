@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "164311524788",
+    "project_id": "srm-app-759bf",
+    "storage_bucket": "srm-app-759bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164311524788:android:5f92d68f6e5e850c61fee1",
+        "android_client_info": {
+          "package_name": "com.example.srm_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164311524788-0jdg0fkp18veeenjo4e0or9fva4cvekd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiJ5uWN4DvFMZcrU7b0R_5RZGwvCwn_m4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164311524788-0jdg0fkp18veeenjo4e0or9fva4cvekd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
