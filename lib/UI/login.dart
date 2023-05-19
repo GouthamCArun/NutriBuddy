@@ -2,8 +2,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:srm_app/UI/home.dart';
+import 'package:srm_app/UI/start.dart';
 
 import '../services/firebase_options.dart';
+import 'register.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -33,7 +36,7 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         // appBar: PreferredSize(
         //   preferredSize: Size.fromHeight(100.0),
         //   child: AppBar(
@@ -78,7 +81,7 @@ class _LoginViewState extends State<LoginView> {
                           Text(
                             'Welcome back you\'ve been missed!',
                             style: GoogleFonts.getFont("Poppins",
-                                textStyle: TextStyle(
+                                textStyle: const TextStyle(
                                   color: Color.fromARGB(255, 0, 0, 0),
                                   fontSize: 20,
                                 )),
@@ -87,7 +90,7 @@ class _LoginViewState extends State<LoginView> {
                           SizedBox(
                             width: 350,
                             child: TextField(
-                                cursorColor: Color(0xFFea4c89),
+                                cursorColor: const Color(0xFFea4c89),
                                 cursorWidth: 5,
                                 controller: _email,
                                 keyboardType: TextInputType.emailAddress,
@@ -99,15 +102,15 @@ class _LoginViewState extends State<LoginView> {
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
-                                  prefixIcon: Icon(Icons.email_outlined),
+                                  prefixIcon: const Icon(Icons.email_outlined),
                                   hintText: "Email",
                                 )),
                           ),
-                          SizedBox(height: 20),
+                          const SizedBox(height: 20),
                           SizedBox(
                             width: 350,
                             child: TextField(
-                                cursorColor: Color(0xFFea4c89),
+                                cursorColor: const Color(0xFFea4c89),
                                 obscureText: true,
                                 enableSuggestions: false,
                                 autocorrect: false,
@@ -118,7 +121,8 @@ class _LoginViewState extends State<LoginView> {
                                     border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
-                                    prefixIcon: Icon(Icons.password_outlined),
+                                    prefixIcon:
+                                        const Icon(Icons.password_outlined),
                                     hintText: "password")),
                           ),
                           Padding(
@@ -129,9 +133,9 @@ class _LoginViewState extends State<LoginView> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                     backgroundColor: MaterialStateProperty.all(
-                                        Color.fromARGB(255, 253, 190, 208)),
-                                    shape: MaterialStateProperty.all<
-                                            RoundedRectangleBorder>(
+                                        const Color.fromARGB(
+                                            255, 253, 190, 208)),
+                                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                         const RoundedRectangleBorder(
                                             borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(20),
@@ -140,8 +144,8 @@ class _LoginViewState extends State<LoginView> {
                                                 bottomRight:
                                                     Radius.circular(20)),
                                             side: BorderSide(
-                                                color:
-                                                    Color.fromARGB(255, 243, 238, 238))))),
+                                                color: Color.fromARGB(
+                                                    255, 243, 238, 238))))),
                                 onPressed: () async {
                                   final email = _email.text;
                                   final password = _password.text;
@@ -151,9 +155,13 @@ class _LoginViewState extends State<LoginView> {
                                         .signInWithEmailAndPassword(
                                             email: email, password: password);
                                     print(userCredentials);
-                                    Navigator.of(context)
-                                        .pushNamedAndRemoveUntil(
-                                            "/home/", (route) => false);
+
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const StartPage()),
+                                    );
                                   } on FirebaseAuthException catch (e) {
                                     if (e.code == "user-not-found") {
                                       print("Invalid email-id ");
@@ -170,7 +178,7 @@ class _LoginViewState extends State<LoginView> {
                                 child: Text(
                                   'Login',
                                   style: GoogleFonts.getFont("Poppins",
-                                      textStyle: TextStyle(
+                                      textStyle: const TextStyle(
                                           color: Color.fromARGB(255, 0, 0, 0),
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold)),
@@ -180,8 +188,11 @@ class _LoginViewState extends State<LoginView> {
                           ),
                           TextButton(
                             onPressed: () {
-                              Navigator.of(context).pushNamedAndRemoveUntil(
-                                  "/register/", (route) => false);
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const RegisterView()),
+                              );
                             },
                             child:
                                 const Text("don't have account, Sign up here!"),
