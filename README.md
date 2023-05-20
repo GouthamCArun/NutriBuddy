@@ -28,8 +28,9 @@ This project was created for HACK SRM by Team Mark 10
   <a href="#tech-stacks-used">Tech-Stacks used</a> •
 
 </p>
-
-  <img src="dashboard.jpeg" alt="Main page" width="full">
+<div align="center">
+  <img src="flutter_02.png" alt="Screenshot" width="33%" />
+</div>
 
 
 ## The Problem We Solve: Transforming your diet, one byte at a time
@@ -68,7 +69,6 @@ Furthermore, for hosting our project, we chose Railway. Railway is a cloud platf
  
    <br>
    <div style="display:flex;">
-    <img src="flutter_02.png" alt="Screenshot" width="33%">
     <img src="flutter_03.jpeg" alt="Screenshot" width="33%">
     <img src="flutter_04.jpeg" alt="Screenshot" width="33%">
     <br>
