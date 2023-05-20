@@ -1,6 +1,7 @@
 import 'package:diamond_bottom_bar/diamond_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:srm_app/UI/dashboard.dart';
+import 'package:srm_app/UI/chatbot.dart';
 
 import 'scan.dart';
 import 'start.dart';
@@ -29,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
       } else if (index == 1) {
         _selectedWidget = const ScanScreen();
       } else if (index == 2) {
-        _selectedWidget = const ScanScreen();
+        _selectedWidget =  ChatScreen();
       }
     });
   }
