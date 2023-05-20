@@ -67,10 +67,12 @@ Overall, our solution will help users make informed decisions about their food c
 Furthermore, for hosting our project, we chose Railway. Railway is a cloud platform that simplifies the deployment and management of web applications. By utilizing Railway for hosting, we were able to easily deploy our project and make it accessible to users over the internet. Railway's user-friendly interface and seamless setup process allowed us to integrate our project with their platform effortlessly. With Railway, we benefit from reliable hosting infrastructure and automatic scaling, ensuring that our application can handle incoming traffic effectively. 
  
    <br>
-    <img src="flutter_02.png" alt="Screenshot" width="35%">
-    <img src="flutter_03.jpeg" alt="Screenshot" width="35%">
-    <img src="flutter_04.jpeg" alt="Screenshot" width="35%">
+   <div style="display:flex;">
+    <img src="flutter_02.png" alt="Screenshot" width="33%">
+    <img src="flutter_03.jpeg" alt="Screenshot" width="33%">
+    <img src="flutter_04.jpeg" alt="Screenshot" width="33%">
     <br>
+   </div>
 # TECH STACKS USED
 
 <h3> 
