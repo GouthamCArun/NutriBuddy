@@ -16,6 +16,7 @@ class _StartPageState extends State<StartPage> {
       backgroundColor: const Color(0xffFFFFFF),
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
@@ -45,14 +46,12 @@ class _StartPageState extends State<StartPage> {
               padding: const EdgeInsets.symmetric(vertical: 20),
               child: MaterialButton(
                 onPressed: () {
-                    Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const FirstPage()),
-                                );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const FirstPage()),
+                  );
                 },
-                color: const Color.fromARGB(255, 89, 255, 130),
+                color: const Color.fromARGB(255, 253, 190, 208),
                 elevation: 10,
                 splashColor: Color.fromARGB(255, 215, 39, 255),
                 height: 45,

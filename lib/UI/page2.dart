@@ -64,13 +64,13 @@ class _SecondPageState extends State<SecondPage> {
                             );
                           },
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage('assets/images/boy.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            padding: EdgeInsets.all(16.0),
+                            padding: const EdgeInsets.all(16.0),
                           ),
                         ),
                       ),
@@ -93,13 +93,13 @@ class _SecondPageState extends State<SecondPage> {
                             );
                           },
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage('assets/images/girl.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            padding: EdgeInsets.all(16.0),
+                            padding: const EdgeInsets.all(16.0),
                           ),
                         ),
                       ),

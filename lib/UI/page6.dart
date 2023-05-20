@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:srm_app/UI/dashboard.dart';
 
 import 'page3.dart';
 import 'prehome.dart';
@@ -133,8 +134,7 @@ class _SixthPageState extends State<SixthPage> {
                           '---------');
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => const PrehomePage()),
+                        MaterialPageRoute(builder: (context) => Dashboard()),
                       );
                     } catch (e) {}
                   },

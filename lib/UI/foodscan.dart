@@ -1,16 +1,17 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:tflite/tflite.dart';
 
-class ScanScreen extends StatefulWidget {
-  const ScanScreen({super.key});
+class FoodScan extends StatefulWidget {
+  const FoodScan({super.key});
 
   @override
-  State<ScanScreen> createState() => _ScanScreenState();
+  State<FoodScan> createState() => _FoodScanState();
 }
 
-class _ScanScreenState extends State<ScanScreen> {
+class _FoodScanState extends State<FoodScan> {
   late bool _loading;
   File? _image;
   List? _outputs;
@@ -33,7 +34,15 @@ class _ScanScreenState extends State<ScanScreen> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Food recognise'),
+          backgroundColor: Colors.greenAccent[100],
+          title: Text(
+            'Food recognise',
+            style: GoogleFonts.poppins(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              color: const Color.fromARGB(255, 0, 0, 0),
+            ),
+          ),
         ),
         backgroundColor: Colors.white,
         body: _loading
@@ -61,30 +70,35 @@ class _ScanScreenState extends State<ScanScreen> {
                             "${_outputs![0]["label"]}"
                                 .replaceAll(RegExp(r'[0-9]'), ''),
                           )
-                        : const Text('Classification waiting'),
+                        : const Column(
+                            children: [
+                              Icon(Icons.image_not_supported),
+                              Text('Take a photo of your image ')
+                            ],
+                          ),
                   ],
                 ),
               ),
-        floatingActionButton: _image == null
-            ? FloatingActionButton(
-                onPressed: pickImage,
-                tooltip: 'Pickimage',
-                child: const Icon(Icons.add),
-              )
-            : null,
+        floatingActionButton: FloatingActionButton(
+          onPressed: pickImage,
+          tooltip: 'Pickimage',
+          child: const Icon(Icons.qr_code_scanner_sharp),
+          backgroundColor: const Color.fromARGB(255, 185, 34, 255),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
   }
 
   loadModel() async {
     Tflite.close();
-    String? res = await Tflite.loadModel(
-        model: "assets/model_unquant.tflite", labels: "assets/labels.txt");
-    print('model loading status: $res');
+    String? res1 = await Tflite.loadModel(
+        model: "assets/model1.tflite", labels: "assets/label1.txt");
+    print('model loading status: $res1');
   }
 
   pickImage() async {
-    var image = await _imagePicker.pickImage(source: ImageSource.gallery);
+    var image = await _imagePicker.pickImage(source: ImageSource.camera);
     if (image == null) return null;
     setState(() {
       _loading = true;

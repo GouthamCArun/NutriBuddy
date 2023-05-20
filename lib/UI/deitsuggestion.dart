@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FooddetailsPage extends StatefulWidget {
-  const FooddetailsPage({super.key});
+class DietSuggestionPage extends StatefulWidget {
+  const DietSuggestionPage({super.key});
 
   @override
-  State<FooddetailsPage> createState() => _FooddetailsPageState();
+  State<DietSuggestionPage> createState() => _DietSuggestionState();
 }
 
-class _FooddetailsPageState extends State<FooddetailsPage> {
+class _DietSuggestionState extends State<DietSuggestionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 253, 190, 208),
+      backgroundColor: Color.fromARGB(255, 245, 202, 214),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: Row(
@@ -34,7 +34,7 @@ class _FooddetailsPageState extends State<FooddetailsPage> {
                     )),
               ),
               Text(
-                "you Wanna Know What's in your food?",
+                "I have a plan for you",
                 style: GoogleFonts.getFont("Mitr",
                     textStyle: const TextStyle(
                       color: Color.fromARGB(255, 0, 0, 0),
