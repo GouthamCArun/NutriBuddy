@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:srm_app/UI/home.dart';
 
 import 'page3.dart';
 import 'prehome.dart';
@@ -53,25 +54,19 @@ class _FifthPageState extends State<FifthPage> {
                       child: Card(
                         child: InkWell(
                           onTap: () {
-                            final _veg_or_nonveg = "vegan";
+                            const _veg_or_nonveg = "vegan";
                             print('------------------------' +
                                 _veg_or_nonveg.toString() +
                                 '---------');
-
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ThirdPage()),
-                            );
                           },
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage('assets/images/veg.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            padding: EdgeInsets.all(16.0),
+                            padding: const EdgeInsets.all(16.0),
                           ),
                         ),
                       ),
@@ -83,24 +78,19 @@ class _FifthPageState extends State<FifthPage> {
                       child: Card(
                         child: InkWell(
                           onTap: () {
-                            final _veg_or_nonveg = "nonvegan";
+                            const _veg_or_nonveg = "nonvegan";
                             print('------------------------' +
                                 _veg_or_nonveg.toString() +
                                 '---------');
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ThirdPage()),
-                            );
                           },
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage('assets/images/non.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            padding: EdgeInsets.all(16.0),
+                            padding: const EdgeInsets.all(16.0),
                           ),
                         ),
                       ),
@@ -126,7 +116,7 @@ class _FifthPageState extends State<FifthPage> {
                               side: BorderSide(
                                   color: Color.fromARGB(255, 243, 238, 238))))),
                   onPressed: () async {
-                    final _veg_or_nonveg = " ";
+                    const _veg_or_nonveg = " ";
                     try {
                       print('------------------------' +
                           _veg_or_nonveg.toString() +
@@ -134,7 +124,7 @@ class _FifthPageState extends State<FifthPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const PrehomePage()),
+                            builder: (context) => const HomeScreen()),
                       );
                     } catch (e) {}
                   },
