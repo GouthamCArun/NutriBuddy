@@ -82,7 +82,7 @@ Furthermore, for hosting our project, we chose Railway. Railway is a cloud platf
   <br>
  3.FIREBASE Authentication
   <br>
- 4.Django (Backend for API calls)
+ 4.Django REST API (Backend for API calls)
   <br>
  5.RAILWAY
   <br>
@@ -91,6 +91,8 @@ Furthermore, for hosting our project, we chose Railway. Railway is a cloud platf
   
 </h3>
 
+#Backend Repo
+The Django Backend we used in this project [Django REST API](https://github.com/KevinOommen/HackSrm-Backend).
 
 
 
