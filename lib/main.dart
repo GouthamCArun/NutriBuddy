@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:srm_app/UI/fooddetails.dart';
 
 import 'UI/first.dart';
+import 'UI/page5.dart';
 import 'UI/start.dart';
 
 void main() {
@@ -13,6 +15,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, title: 'Diety', home: First());
+        debugShowCheckedModeBanner: false, title: 'Diety', home: FifthPage());
   }
 }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'page3.dart';
-import 'prehome.dart';
+import 'page6.dart';
 
 class FifthPage extends StatefulWidget {
   const FifthPage({super.key});
@@ -13,7 +12,11 @@ class FifthPage extends StatefulWidget {
 
 class _FifthPageState extends State<FifthPage> {
   @override
-  late final _veg_or_nonveg;
+  late final TextEditingController _to_gain_or_loose;
+  void initState() {
+    _to_gain_or_loose = TextEditingController();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +28,7 @@ class _FifthPageState extends State<FifthPage> {
             child: Column(children: <Widget>[
               const Padding(padding: EdgeInsets.all(20)),
               Text(
-                'One Final Question',
+                'Loose or Gain ?',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(
@@ -34,79 +37,36 @@ class _FifthPageState extends State<FifthPage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              Image.asset(
+                'assets/images/firstpage.png',
+                height: 300,
+                width: 300,
+              ),
               Text(
-                "I am a",
+                "I Wanna",
                 style: GoogleFonts.getFont("Poppins",
                     textStyle: const TextStyle(
                       color: Color.fromARGB(255, 0, 0, 0),
                       fontSize: 20,
                     )),
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 30),
               SizedBox(
-                child: Row(
-                  children: [
-                    SizedBox(
-                      height: 150,
-                      width: 150,
-                      child: Card(
-                        child: InkWell(
-                          onTap: () {
-                            final _veg_or_nonveg = "vegan";
-                            print('------------------------' +
-                                _veg_or_nonveg.toString() +
-                                '---------');
-
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ThirdPage()),
-                            );
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage('assets/images/veg.png'),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            padding: EdgeInsets.all(16.0),
-                          ),
-                        ),
+                width: 350,
+                child: TextField(
+                    cursorColor: const Color(0xFFea4c89),
+                    cursorWidth: 5,
+                    enableSuggestions: false,
+                    autocorrect: false,
+                    controller: _to_gain_or_loose,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
                       ),
-                    ),
-                    const SizedBox(width: 30),
-                    SizedBox(
-                      height: 150,
-                      width: 150,
-                      child: Card(
-                        child: InkWell(
-                          onTap: () {
-                            final _veg_or_nonveg = "nonvegan";
-                            print('------------------------' +
-                                _veg_or_nonveg.toString() +
-                                '---------');
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ThirdPage()),
-                            );
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage('assets/images/non.png'),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            padding: EdgeInsets.all(16.0),
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
+                      hintText: "loose or gain ",
+                    )),
               ),
               const SizedBox(height: 30),
               SizedBox(
@@ -126,25 +86,25 @@ class _FifthPageState extends State<FifthPage> {
                               side: BorderSide(
                                   color: Color.fromARGB(255, 243, 238, 238))))),
                   onPressed: () async {
-                    final _veg_or_nonveg = " ";
+                    final to_gain_or_loose = _to_gain_or_loose.text;
                     try {
                       print('------------------------' +
-                          _veg_or_nonveg.toString() +
+                          to_gain_or_loose.toString() +
                           '---------');
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const PrehomePage()),
+                            builder: (context) => const SixthPage()),
                       );
                     } catch (e) {}
                   },
                   child: Text(
-                    "All Done!",
+                    'One more',
                     style: GoogleFonts.getFont("Poppins",
                         textStyle: const TextStyle(
                             color: Color.fromARGB(255, 0, 0, 0),
                             fontSize: 20,
-                            fontWeight: FontWeight.w300)),
+                            fontWeight: FontWeight.bold)),
                   ),
                 ),
               ),

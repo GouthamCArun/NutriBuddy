@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'page5.dart';
+import 'page6.dart';
 
 class ForthPage extends StatefulWidget {
   const ForthPage({super.key});
