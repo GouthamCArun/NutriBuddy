@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:srm_app/UI/dashboard.dart';
 import 'package:srm_app/UI/page1.dart';
 
 class StartPage extends StatefulWidget {
@@ -65,7 +66,40 @@ class _StartPageState extends State<StartPage> {
                   ],
                 ),
               ),
-            )
+            ),
+            Row(
+              children: [
+                SizedBox(width: 250),
+                Text(
+                  'Skip Now',
+                  style: GoogleFonts.poppins(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w700,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 15, right: 20, left: 10),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Dashboard()),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 10.0),
+                      child: const Icon(
+                        Icons.arrow_circle_right_outlined,
+                        color: Colors.black,
+                        size: 40.0,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

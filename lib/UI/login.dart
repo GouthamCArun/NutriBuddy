@@ -6,6 +6,7 @@ import 'package:srm_app/UI/home.dart';
 import 'package:srm_app/UI/start.dart';
 
 import '../services/firebase_options.dart';
+import 'dashboard.dart';
 import 'register.dart';
 
 class LoginView extends StatefulWidget {
@@ -160,7 +161,7 @@ class _LoginViewState extends State<LoginView> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const StartPage()),
+                                              const Dashboard()),
                                     );
                                   } on FirebaseAuthException catch (e) {
                                     if (e.code == "user-not-found") {
