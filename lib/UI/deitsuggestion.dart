@@ -16,10 +16,10 @@ class _DietSuggestionState extends State<DietSuggestionPage> {
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.left,
           children: [
             const SizedBox(
-              height: 1000,
+              height: 200,
             ),
             Column(children: [
               const SizedBox(
@@ -43,11 +43,11 @@ class _DietSuggestionState extends State<DietSuggestionPage> {
               ),
               Row(children: [
                 Text(
-                  'details here ',
+                  "\n\nHey! Great that you are looking to maintain a \n healthy weight and stay fit. Here's a diet plan \nthat you can follow:\n\n• Keto Diet: This diet involves reducing your carb \nintake and increasing .\n This helps to reduce your body weight.\n\n• Eat healthy and nutritious meals: Make sure \nyou eat meals that are rich in proteins,\n healthy fats, and complex carbohydrates.\n Avoid processed foods and deep fried foods.\n\n• Drink lots of water This helps to keep your body hydrated\n\n• Exercise regularly: Aim to exercise at least 5 days a week. \n\n• Get enough sleep: Aim to get at least 8 hours of sleep per night.\n\n• Avoid alcohol and smoking: These habits can have a negative impact on your health and should be avoided.\n\nFollowing this diet plan should help you reach your goal of losing 2 kg. All the best!",
                   style: GoogleFonts.getFont("Mitr",
                       textStyle: const TextStyle(
                         color: Color.fromARGB(255, 0, 0, 0),
-                        fontSize: 20,
+                        fontSize: 15,
                       )),
                 ),
               ]),

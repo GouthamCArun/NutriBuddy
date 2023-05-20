@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, title: 'Diety', home: ChatScreen());
+        debugShowCheckedModeBanner: false,
+        title: 'Diety',
+        home: DietSuggestionPage());
   }
 }
