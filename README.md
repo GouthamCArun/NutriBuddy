@@ -12,7 +12,10 @@
 
 ## About
 
-This project was created for HACK SRM by Team Mark 10 
+This project was created for HACK SRM by Team Mark 10
+
+## Tracks we are competing for
+    AI/ML
 
 ## Team Members:
 
@@ -26,7 +29,7 @@ This project was created for HACK SRM by Team Mark 10
   <a href="#problem-helpnow-solves">Problem Statement</a> •
    <a href="#solution">Solution</a> •
   <a href="#tech-stacks-used">Tech-Stacks used</a> •
-  <a href="#backend-repo">Tech-Stacks used</a> •
+  <a href="#backend-repo">Backend Repo</a> •
 
 </p>
 <div align="center">
