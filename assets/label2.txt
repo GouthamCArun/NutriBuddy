@@ -1,0 +1,40 @@
+0 Adhirasam
+1 Aloo gobi
+2 Aloo matar
+3 aloo_tikki
+4 laddu
+5 bhatura
+6 bhindi_masala
+7 biryani
+8 butter_chicken
+9 chana_masala
+10  chapati
+11  chicken_tikka
+12 chikki
+13 daal_puri
+14 dal_makhani
+15 dal_tadka
+16 semiya payasam
+17 double_ka_meetha
+18 gulab_jamun
+19 jalebi
+20 kachori
+21 kadai_paneer
+22 kadhi_pakoda
+23 kakinada_khaja
+24 kalakand
+25 kuzhi_paniyaram
+26 lassi
+27 ledikeni
+28 litti_chokha
+29 mysore_pak
+30 naan
+31 palak_paneer
+32  paneer_butter_masala
+33 ras_malai
+34 rasgulla
+35 shrikhand
+36 sohan_halwa
+37 Sohan papdi
+38 Sutar feni
+39  Unni appam

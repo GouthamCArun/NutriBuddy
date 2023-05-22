@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:srm_app/UI/dashboard.dart';
+import 'package:srm_app/UI/home.dart';
 import 'package:srm_app/UI/page1.dart';
 
 class StartPage extends StatefulWidget {
@@ -54,7 +55,7 @@ class _StartPageState extends State<StartPage> {
                 },
                 color: const Color.fromARGB(255, 253, 190, 208),
                 elevation: 10,
-                splashColor: Color.fromARGB(255, 215, 39, 255),
+                splashColor: const Color.fromARGB(255, 215, 39, 255),
                 height: 45,
                 minWidth: 200,
                 child: const Row(
@@ -69,7 +70,7 @@ class _StartPageState extends State<StartPage> {
             ),
             Row(
               children: [
-                SizedBox(width: 250),
+                const SizedBox(width: 250),
                 Text(
                   'Skip Now',
                   style: GoogleFonts.poppins(
@@ -85,12 +86,12 @@ class _StartPageState extends State<StartPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Dashboard()),
+                            builder: (context) => const HomeScreen()),
                       );
                     },
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom: 10.0),
-                      child: const Icon(
+                    child: const Padding(
+                      padding: EdgeInsets.only(bottom: 10.0),
+                      child: Icon(
                         Icons.arrow_circle_right_outlined,
                         color: Colors.black,
                         size: 40.0,

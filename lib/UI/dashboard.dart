@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:srm_app/UI/foodscan.dart';
-import 'package:srm_app/widgets/indicators.dart';
+
+import '../widgets/indicator.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -253,7 +254,8 @@ class _DashboardState extends State<Dashboard> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const FoodScan()),
+                                builder: (context) => const FoodScan(),
+                              ),
                             );
                           },
                           child: Container(

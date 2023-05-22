@@ -44,6 +44,7 @@ dependencies:
   tflite: ^1.1.2
   diamond_bottom_bar: ^1.0.0
   syncfusion_flutter_gauges: ^21.2.5
+  http: ^0.13.6
 
 
 dev_dependencies:

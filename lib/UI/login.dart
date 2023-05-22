@@ -161,7 +161,7 @@ class _LoginViewState extends State<LoginView> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const Dashboard()),
+                                              const HomeScreen()),
                                     );
                                   } on FirebaseAuthException catch (e) {
                                     if (e.code == "user-not-found") {

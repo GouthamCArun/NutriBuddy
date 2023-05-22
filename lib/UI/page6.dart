@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:srm_app/UI/dashboard.dart';
+import 'package:srm_app/UI/home.dart';
 
+import 'deitsuggestion.dart';
 import 'page3.dart';
 import 'prehome.dart';
 
@@ -62,17 +64,18 @@ class _SixthPageState extends State<SixthPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const ThirdPage()),
+                                  builder: (context) =>
+                                      const DietSuggestionPage()),
                             );
                           },
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage('assets/images/veg.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            padding: EdgeInsets.all(16.0),
+                            padding: const EdgeInsets.all(16.0),
                           ),
                         ),
                       ),
@@ -91,17 +94,18 @@ class _SixthPageState extends State<SixthPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const ThirdPage()),
+                                  builder: (context) =>
+                                      const DietSuggestionPage()),
                             );
                           },
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image: AssetImage('assets/images/non.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            padding: EdgeInsets.all(16.0),
+                            padding: const EdgeInsets.all(16.0),
                           ),
                         ),
                       ),
@@ -110,44 +114,6 @@ class _SixthPageState extends State<SixthPage> {
                 ),
               ),
               const SizedBox(height: 30),
-              SizedBox(
-                height: 55,
-                width: 350,
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          const Color.fromARGB(255, 253, 190, 208)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          const RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20),
-                                  topRight: Radius.circular(20),
-                                  bottomLeft: Radius.circular(20),
-                                  bottomRight: Radius.circular(20)),
-                              side: BorderSide(
-                                  color: Color.fromARGB(255, 243, 238, 238))))),
-                  onPressed: () async {
-                    final _veg_or_nonveg = " ";
-                    try {
-                      print('------------------------' +
-                          _veg_or_nonveg.toString() +
-                          '---------');
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Dashboard()),
-                      );
-                    } catch (e) {}
-                  },
-                  child: Text(
-                    "All Done!",
-                    style: GoogleFonts.getFont("Poppins",
-                        textStyle: const TextStyle(
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            fontSize: 20,
-                            fontWeight: FontWeight.w300)),
-                  ),
-                ),
-              ),
             ]),
           ),
         ));
